@@ -1,4 +1,5 @@
 #include "Jugador.h"
+#include "proyecto.h"
 #include <vector>
 
 using namespace std;
@@ -20,6 +21,9 @@ int main() {
     for (auto& jugador : jugadores) {
         jugador.mostrarDatos();
     }
+    /*cout<<"-.-.-.-.-.-.-.-.-"<<endl;
+      string version = proyecto::getVersion();
+      cout << version << endl;*/
 
     return 0;
 }

@@ -3,4 +3,5 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
-    Jugador.h
+    Jugador.h \
+    proyecto.h
