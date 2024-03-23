@@ -11,3 +11,15 @@
 ```cpp
  QString getVersion();
 ```
+### [Ejercicio 04](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-04) 
+
+- Crear un std::vector para contener int
+- Cargar 30 valores pseudo aleatorios entre 1 y 15
+- Publicar la moda
+
+### [Ejercicio 05](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-05)
+
+- Crear un std::vector para contener objetos de la clase std::string
+- Cargar 5 expresiones idiomáticas, como por ejemplo: pan comido
+- Publicar por consola ordenado alfabéticamente
+
