@@ -23,3 +23,13 @@
 - Cargar 5 expresiones idiomáticas, como por ejemplo: pan comido
 - Publicar por consola ordenado alfabéticamente
 
+### [Ejercicio 06](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-06)
+
+- Crear una nueva clase (que no sea Persona, ni Cliente, ni Poste). Invente una clase.
+- Agregar uno o más constructores, agregar sus métodos y sus atributos
+- Crear algunos objetos de esta clase en la función main
+
+### [Ejercicio 07](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-07)
+
+- Utilizar la clase creada en el ejercicio anterior para crear objetos y almacenarlos en un std::vector
+- ¿Se pueden ordenar? Qué estrategia utilizaría para ordenarlos de menor a mayor
