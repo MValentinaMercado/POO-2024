@@ -78,39 +78,42 @@
 - Punto de partida: Usar el código del ejemplo del control de volumen
 - Cuando el valor del QSlider se modifique, colocar como título de la ventana el mismo valor que tiene el QSlider.
 
-``
-#include <QApplication>
-#include <QWidget>
-#include <QHBoxLayout>
-#include <QSlider>
-#include <QSpinBox>
+.. code-block::
 
-int main( int argc, char** argv )  {
-    QApplication a( argc, argv );
+	#include <QApplication>
+	#include <QWidget>
+	#include <QHBoxLayout>
+	#include <QSlider>
+	#include <QSpinBox>
 
-    QWidget * ventana = new QWidget;  // Es la ventana padre (principal)
-    ventana->setWindowTitle( "Volumen" ); 
-    ventana->resize( 300, 50 );
+	int main( int argc, char** argv )  {
+	    QApplication a( argc, argv );
 
-    QSpinBox * spinBox = new QSpinBox;
-    QSlider * slider = new QSlider( Qt::Horizontal );
-    spinBox->setRange( 0, 100 );
-    slider->setRange( 0, 100 );
+	    QWidget * ventana = new QWidget;  // Es la ventana padre (principal)
+	    ventana->setWindowTitle( "Volumen" ); 
+	    ventana->resize( 300, 50 );
 
-    QObject::connect( spinBox, SIGNAL( valueChanged( int ) ), slider, SLOT( setValue( int ) ) );
-    QObject::connect( slider, SIGNAL( valueChanged( int ) ),  spinBox, SLOT( setValue( int ) ) );
+	    QSpinBox * spinBox = new QSpinBox;
+	    QSlider * slider = new QSlider( Qt::Horizontal );
+	    spinBox->setRange( 0, 100 );
+	    slider->setRange( 0, 100 );
 
-    spinBox->setValue( 15 );
+	    QObject::connect( spinBox, SIGNAL( valueChanged( int ) ), slider, SLOT( setValue( int ) ) );
+	    QObject::connect( slider, SIGNAL( valueChanged( int ) ),  spinBox, SLOT( setValue( int ) ) );
 
-    QHBoxLayout * layout = new QHBoxLayout;
-    layout->addWidget( spinBox );
-    layout->addWidget( slider );
-    ventana->setLayout( layout );
-    ventana->setVisible( true );    
+	    spinBox->setValue( 15 );
 
-    return a.exec();
-}
-``
+	    QHBoxLayout * layout = new QHBoxLayout;
+	    layout->addWidget( spinBox );
+	    layout->addWidget( slider );
+	    ventana->setLayout( layout );
+	    ventana->setVisible( true );	
+
+	    return a.exec();
+	}
+	
+
+
 
 **Otros Ejercicios**
 
