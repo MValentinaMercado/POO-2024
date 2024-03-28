@@ -73,4 +73,9 @@
 - Mostrar el QLabel de forma maximizada y que la imagen no se deforme.
 - Al cabo de 3 segundos, el QLabel y la aplicación se deberá cerrar
 
-  
+**Otros Ejercicios**
+
+ ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
+
+ 
+
