@@ -75,7 +75,7 @@
 
 **Otros Ejercicios**
 
- ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
+- ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
 
  
 
