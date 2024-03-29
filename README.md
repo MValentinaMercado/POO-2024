@@ -124,7 +124,7 @@ int main( int argc, char** argv )  {
 - Si se ingresa otra clave se borrará el texto del QLineEdit de la clave.
 
 ### [Ejercicio 15](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-15)
-.. figure:: imagenes/ejercicio_captcha.jpg
+##[Enunciado](https://github.com/MValentinaMercado/POO-2024/blob/main/imagenes/ejercicio_captcha.jpg)
 
 **Otros Ejercicios**
 
