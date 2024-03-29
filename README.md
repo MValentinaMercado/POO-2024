@@ -123,6 +123,8 @@ int main( int argc, char** argv )  {
 - Si la clave ingresada es admin:1111, se cierra Login y se muestra Formulario
 - Si se ingresa otra clave se borrará el texto del QLineEdit de la clave.
 
+### [Ejercicio 15](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-15)
+.. figure:: imagenes/ejercicio_captcha.jpg
 
 **Otros Ejercicios**
 
