@@ -126,6 +126,11 @@ int main( int argc, char** argv )  {
 ### [Ejercicio 15](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-15)
 #### [Enunciado](https://github.com/MValentinaMercado/POO-2024/blob/main/imagenes/ejercicio_captcha.jpg)
 
+### [Ejercicio 16](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-16)
+
+- Registrar en MongoDB algunos usuarios (nombre, apellido, usuario, clave)
+- Tener disponible un endpoint con FastAPI para validar usuarios.
+
 **Otros Ejercicios**
 
 - ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
