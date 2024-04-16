@@ -131,7 +131,8 @@ int main( int argc, char** argv )  {
 - Registrar en MongoDB algunos usuarios (nombre, apellido, usuario, clave)
 - Tener disponible un endpoint con FastAPI para validar usuarios.
 
-  ### [Ejercicio 14 Continuacion](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-14-continuacion)
+### [Ejercicio 14 Continuacion](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-14-continuacion)
+
 - Publicar en la ventana de Login, la temperatura actual en la Ciudad de Córdoba. Usar alguna API disponible.
 - Agregar un método en Login que permita mostrar u ocultar la información de la temperatura.
 - Además que la ventana de Login tenga como background una imagen descargada de interner, centrada y adaptada en tamaño, sin deformar su aspecto y que permita al usuario que modifique el tamaño del Login y que se siga viendo correctamente la imagen.
