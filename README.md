@@ -139,11 +139,24 @@ int main( int argc, char** argv )  {
 - Agregar un método en Login que permita indicar la URL de la imagen que se mostrará en el background. En caso que nunca se invoque a este método, ninguna imagen se mostrará.
 - Agregar la siguiente característica a Login: Si el usuario falla 3 veces la clave, bloquear por 5 minutos a ese usuario.
 
-### [Ejercicio 16 Continuacion]()
+### [Ejercicio 16 Continuacion](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-16%20-%20continuacion)
 
 - Que el endpoint para validar a los usuarios sea con un POST y que devuelva "denegado" o que devuelva el nombre y el apellido del usuario en el siguiente formato: "Juan Carlos::Ponce"
 - Probar el funcionamiento de este endpoint mediante la web de prueba de FastAPI.
 
+### [Ejercicio 17](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-17)
+
+- Diseñar un login que cargue como fondo, una imagen descargada de internet
+- Cuando un usuario sea válido, que se abra en full screen otra ventana (definida en la clase Ventana) y que tenga otra imagen descargada de internet en su interior, abarcando toda la ventana.
+- Esta ventana no deberá abrirse hasta tanto se haya descargado la imagen.
+- La imagen no se debe deformar al visualizarse.
+
+### [Ejercicio 18](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-18)
+
+- Utilizar un proyecto con un login cualquiera que valide admin:1234
+- Cuando el usuario es válido, abrir una nueva ventana que tenga un QTextEdit que permita mostrar código HTML.
+- Esta ventana deberá tener un QLineEdit que permita ingresar una URL
+- Cuando se pulse Enter, se deberá buscar el html de la URL escrita y se deberá publicar en el QTextEdit.
 
 **Otros Ejercicios**
 
