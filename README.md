@@ -139,6 +139,12 @@ int main( int argc, char** argv )  {
 - Agregar un método en Login que permita indicar la URL de la imagen que se mostrará en el background. En caso que nunca se invoque a este método, ninguna imagen se mostrará.
 - Agregar la siguiente característica a Login: Si el usuario falla 3 veces la clave, bloquear por 5 minutos a ese usuario.
 
+### [Ejercicio 16 Continuacion]()
+
+- Que el endpoint para validar a los usuarios sea con un POST y que devuelva "denegado" o que devuelva el nombre y el apellido del usuario en el siguiente formato: "Juan Carlos::Ponce"
+- Probar el funcionamiento de este endpoint mediante la web de prueba de FastAPI.
+
+
 **Otros Ejercicios**
 
 - ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
