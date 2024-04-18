@@ -160,9 +160,9 @@ int main( int argc, char** argv )  {
 
 **Otros Ejercicios**
 
-- ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
+### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
   
-- ### [Ejercicio A](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-A)
+### [Ejercicio A](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-A)
 - Comenzar un proyecto vacío con QtCreator y diseñar un login de usuarios como el siguiente:
 - Tendrá un tamaño de 250x120 píxeles y llevará por título "Login".
 - Para el layout utilizar QGridLayout.
@@ -175,7 +175,7 @@ int main( int argc, char** argv )  {
 - Esta imagen se mostrará en el QWidget exactamente centrada.
 - Dibujar además un cuadrado que envuelva la imagen (como muestra el ejemplo).
 
-- ### [Ejercicio B](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-B)
+### [Ejercicio B](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-B)
 - Crear una aplicación que inicie con un login validando el usuario admin:123
 - Luego de ingresar el usuario válido, mostrar un nuevo QWidget con las siguientes características:
 - Definida en la clase Editor
@@ -188,3 +188,27 @@ int main( int argc, char** argv )  {
 - Un QLineEdit y un QPushButton "Guardar"
 - En este QLineEdit el usuario puede colocar el nombre de un archivo .txt
 - Al presionar Guardar se almacenará todo el texto del QTextEdit en este archivo .txt
+
+### [Ejercicio C](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-C)
+
+- Crear una clase Barra para dar funcionalidad a una barra de progreso
+- Debe tener métodos para setear su valor en porcentaje
+- Usar la señal de downloadProgress de QNetworkReply para controlar el porcentaje de descarga
+- Crear una interfaz que tenga un QLineEdit para una URL y un objeto Barra.
+- Probarlo con alguna URL que pertenezca a un archivo de tamaño superior a 50MB para que se note la demora en la descarga.
+
+### [Ejercicio D](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-D)
+
+- Diseñar una aplicación para una galería de fotos
+- En un archivo .txt almacenar en cada línea, una URL a una imagen
+- Un botón >> y otro botón << para avanzar o retroceder en la galería de fotos
+
+### [Ejercicio E](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-E)
+
+- Definir la clase Ventana que herede de QWidget
+- Usar desde el disco una imagen de una bola 8 con formato PNG (para usar transparencias).
+- Ventana tendrá un QGroupBox con los siguientes parámetros:
+- Diámetro de la bola (en píxeles)
+- Velocidad (segundos para ir de lado a lado)
+- QPushButton para actualizar estos parámetros en la bola
+- La bola irá golpeando de izquierda a derecha en la Ventana.
