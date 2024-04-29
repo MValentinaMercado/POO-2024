@@ -158,6 +158,13 @@ int main( int argc, char** argv )  {
 - Esta ventana deberá tener un QLineEdit que permita ingresar una URL
 - Cuando se pulse Enter, se deberá buscar el html de la URL escrita y se deberá publicar en el QTextEdit.
 
+### [Ejercicio 19](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-19)
+
+- Crear una clase Pintura que herede de QWidget y que permita dibujar a mano alzada con el mouse.
+- Con el scroll permitirá ampliar y disminuir el tamaño del trazo del pincel.
+- Con las teclas R, G y B se cambia el color del pincel.
+- Con Escape se borra todo lo que esté dibujado.
+
 **Otros Ejercicios**
 
 ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
@@ -212,3 +219,4 @@ int main( int argc, char** argv )  {
 - Velocidad (segundos para ir de lado a lado)
 - QPushButton para actualizar estos parámetros en la bola
 - La bola irá golpeando de izquierda a derecha en la Ventana.
+
