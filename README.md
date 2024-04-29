@@ -1,4 +1,4 @@
-# POO-2024
+# Ejercicios de POO-2024
 
 ### [Ejercicio 01](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-01) 
 
@@ -165,7 +165,7 @@ int main( int argc, char** argv )  {
 - Con las teclas R, G y B se cambia el color del pincel.
 - Con Escape se borra todo lo que esté dibujado.
 
-**Otros Ejercicios**
+# Ejercicios Extra
 
 ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
   
