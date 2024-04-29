@@ -165,6 +165,10 @@ int main( int argc, char** argv )  {
 - Con las teclas R, G y B se cambia el color del pincel.
 - Con Escape se borra todo lo que esté dibujado.
 
+
+
+
+
 # Ejercicios Extra
 
 ### [Login-Mapa](https://github.com/MValentinaMercado/POO-2024/tree/main/Login-mapa)
