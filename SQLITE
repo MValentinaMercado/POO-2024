@@ -1,0 +1,54 @@
+SQLITE 
+Crear base y agregar datos.
+
+
+C:\Users\merca>cd C:\Sqlite\sqlite-tools-win-x64-3450300
+
+C:\Sqlite\sqlite-tools-win-x64-3450300>sqlite.exe base_prueba
+"sqlite.exe" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Sqlite\sqlite-tools-win-x64-3450300>sqlite3.exe base_prueba
+SQLite version 3.45.3 2024-04-15 13:34:05 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+sqlite>
+sqlite>
+sqlite>
+sqlite> create table usuarios (
+(x1...>     id integer primary key,
+(x1...>     usuario varchar(30),
+(x1...>     clave varchar(30),
+(x1...>     nombre varchar(50),
+(x1...>     apellido varchar(50),
+(x1...>     mail varchar(50)
+(x1...> );
+sqlite>
+sqlite>
+sqlite> INSERT INTO usuarios (usuario, clave, nombre, apellido, mail)
+   ...> VALUES
+   ...> ('cgomez', '1234', 'Carlos', 'Gomez', 'cgomez@gmail.com'),
+   ...> ('jlopez', '1234', 'Juan', 'Lopez', 'jlopez@gmail.com'),
+   ...> ('mmartinez', '1234', 'Maria', 'Martinez', 'mmartinez@gmail.com'),
+   ...> ('jperez', '1234', 'Jose', 'Perez', 'jperez@gmail.com'),
+   ...> ('asanchez', '1234', 'Ana', 'Sanchez', 'asanchez@gmail.com'),
+   ...> ('dgonzalez', '1234', 'David', 'Gonzalez', 'dgonzalez@gmail.com'),
+   ...> ('lrodriguez', '1234', 'Laura', 'Rodriguez', 'lrodriguez@gmail.com'),
+   ...> ('mramirez', '1234', 'Manuel', 'Ramirez', 'mramirez@gmail.com'),
+   ...> ('eperez', '1234', 'Elena', 'Perez', 'eperez@gmail.com'),
+   ...> ('rcastillo', '1234', 'Roberto', 'Castillo', 'rcastillo@gmail.com');
+sqlite>
+sqlite>
+sqlite> select * from usuarios;
+1|cgomez|1234|Carlos|Gomez|cgomez@gmail.com
+2|jlopez|1234|Juan|Lopez|jlopez@gmail.com
+3|mmartinez|1234|Maria|Martinez|mmartinez@gmail.com
+4|jperez|1234|Jose|Perez|jperez@gmail.com
+5|asanchez|1234|Ana|Sanchez|asanchez@gmail.com
+6|dgonzalez|1234|David|Gonzalez|dgonzalez@gmail.com
+7|lrodriguez|1234|Laura|Rodriguez|lrodriguez@gmail.com
+8|mramirez|1234|Manuel|Ramirez|mramirez@gmail.com
+9|eperez|1234|Elena|Perez|eperez@gmail.com
+10|rcastillo|1234|Roberto|Castillo|rcastillo@gmail.com
+sqlite> .exit
+
+C:\Sqlite\sqlite-tools-win-x64-3450300>
