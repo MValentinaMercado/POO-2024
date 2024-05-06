@@ -1,4 +1,3 @@
-// En login.h
 #ifndef LOGIN_H
 #define LOGIN_H
 
@@ -13,9 +12,9 @@
 #include <QJsonObject>
 #include <QJsonValue>
 #include <QDebug>
-#include <QPixmap>
-#include <QPalette>
 #include <QTimer>
+
+
 #include "Formulario.h"
 
 class login : public QWidget {
@@ -26,19 +25,26 @@ private:
     QPushButton *pbEntrar, *pbMostrarTemperatura;
     QGridLayout *layout;
     QNetworkAccessManager *networkManager;
-    QString backgroundImageUrl;
+    QByteArray imageData;
+    QNetworkAccessManager *networkManagerImagen;
     int intentosFallidos;
     QTimer bloqueoTimer;
 
+
 public:
-    login();
-    void setBackgroundImage(const QString &imageUrl);
+      login(QWidget *parent = nullptr);
+       void setImagenUrl(const QString &url);
+
+protected:
+    void paintEvent(QPaintEvent *);
 
 private slots:
     void slot_validarUsuario();
     void slot_temperaturaRecibida(QNetworkReply *reply);
     void slot_mostrarOcultarTemperatura();
     void slot_desbloquearUsuario();
+     void slot_imagenDescargada(QNetworkReply *reply);
+
 };
 
 #endif // LOGIN_H
