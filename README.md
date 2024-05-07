@@ -131,7 +131,7 @@ int main( int argc, char** argv )  {
 - Agregar un método en Login que permita indicar la URL de la imagen que se mostrará en el background. En caso que nunca se invoque a este método, ninguna imagen se mostrará.
 - Agregar la siguiente característica a Login: Si el usuario falla 3 veces la clave, bloquear por 5 minutos a ese usuario.
 
-## [Parte 3]()
+## [Parte 3](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-14%20-%20parte%203)
 - Incorporar la validación de usuarios con QSLite.
 - Todo lo que se haga con la base de datos, que se encuentre en la clase AdminDB
 
