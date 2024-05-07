@@ -1,15 +1,17 @@
 
-QT += widgets network
+QT += widgets network sql
 
 TARGET = YourApplicationName
 TEMPLATE = app
 
 SOURCES += \
+    adminDB.cpp \
     main.cpp \
     login.cpp \
     Formulario.cpp
 
 HEADERS += \
+    adminDB.h \
     login.h \
     Formulario.h
 

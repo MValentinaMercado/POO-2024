@@ -27,26 +27,32 @@ login::login(QWidget *parent)
        layout->addWidget(leClave, 1, 1, 1, 2);
        layout->addWidget(pbEntrar, 2, 1, 1, 1);
        layout->addWidget(lTemperatura, 3, 0, 1, 3);
-        layout->addWidget(pbMostrarTemperatura, 4, 0, 1, 3);
+       layout->addWidget(pbMostrarTemperatura, 4, 0, 1, 3);
        setLayout(layout);
-       connect(pbEntrar, SIGNAL(clicked()), this, SLOT(slot_validarUsuario()));
 
-         connect(leClave, SIGNAL(returnPressed()), this, SLOT(slot_validarUsuario()));
-       connect(pbMostrarTemperatura, SIGNAL(clicked()), this, SLOT(slot_mostrarOcultarTemperatura()));
-           networkManager = new QNetworkAccessManager(this);
-           connect(networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(slot_temperaturaRecibida(QNetworkReply*)));
+       connect(pbEntrar, SIGNAL(clicked()), this, SLOT(slot_validarUsuario()));
+       connect(leClave, SIGNAL(returnPressed()), this, SLOT(slot_validarUsuario()));
+
+       // Conectamos la api
+       networkManager = new QNetworkAccessManager(this);
+       connect(networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(slot_temperaturaRecibida(QNetworkReply*)));
        QUrl url("http://api.weatherapi.com/v1/current.json?key=23452d788ca74ae5acd154411241604&q=Cordoba&aqi=no");
        QNetworkRequest request(url);
        networkManager->get(request);
+       // conectamos el boton para la temperatura
+       connect(pbMostrarTemperatura, SIGNAL(clicked()), this, SLOT(slot_mostrarOcultarTemperatura()));
 
+       // Inicializamos el timer
+       intentosFallidos = 0;
+       bloqueoTimer.setSingleShot(true);
+       bloqueoTimer.setInterval(300000);
 
-    // Inicialización del timer para el bloqueo
-    intentosFallidos = 0;
-    bloqueoTimer.setSingleShot(true);
-    bloqueoTimer.setInterval(300000);
+       //  URL de la imagen
+       setImagenUrl("https://th.bing.com/th/id/OIP.wZt12NN-HGUOhWST3INsVAAAAA?rs=1&pid=ImgDetMain");
 
-    // Llamada al método para establecer la URL de la imagen
-    setImagenUrl("https://th.bing.com/th/id/OIP.wZt12NN-HGUOhWST3INsVAAAAA?rs=1&pid=ImgDetMain");
+       adminDB = new AdminDB( this );
+       qDebug() << "La base se abrio bien" << adminDB->conectar( "C:/Sqlite/DB/base_prueba" );
+
 }
 
 void login::paintEvent(QPaintEvent *) {
@@ -75,11 +81,12 @@ void login::slot_validarUsuario() {
     if (intentosFallidos >= 3) {
         return;
     }
-
-    if (leUsuario->text() == "admin" && leClave->text() == "1111") {
-        close();
+//usuario: cgomez
+//Clave: 1234
+    if (adminDB->validarUsuario( "usuarios", leUsuario->text(), leClave->text() )) {
         Formulario *formulario = new Formulario();
         formulario->show();
+        this->close();
     } else {
         leClave->clear();
         intentosFallidos++;
