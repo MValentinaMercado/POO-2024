@@ -15,7 +15,6 @@
 #include <QTimer>
 
 
-#include "adminDB.h"
 #include "Formulario.h"
 
 class login : public QWidget {
@@ -30,7 +29,6 @@ private:
     QNetworkAccessManager *networkManagerImagen;
     int intentosFallidos;
     QTimer bloqueoTimer;
-    AdminDB * adminDB;
 
 
 public:
@@ -45,7 +43,7 @@ private slots:
     void slot_temperaturaRecibida(QNetworkReply *reply);
     void slot_mostrarOcultarTemperatura();
     void slot_desbloquearUsuario();
-    void slot_imagenDescargada(QNetworkReply *reply);
+     void slot_imagenDescargada(QNetworkReply *reply);
 
 };
 
