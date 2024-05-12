@@ -18,7 +18,7 @@ private:
     AdminDB *adminDB;
 
 public:
-    Formulario();
+     Formulario(AdminDB *adminDB);
 
 private slots:
     void slot_UsuarioForm();

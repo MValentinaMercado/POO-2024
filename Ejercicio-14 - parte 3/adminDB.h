@@ -6,6 +6,8 @@
 #include <QString>
 #include <QObject>
 #include <QDebug>
+#include <QCryptographicHash>
+#include <QSqlRecord>
 
 class AdminDB : public QObject
 {
@@ -16,8 +18,10 @@ public:
     bool conectar( QString archivoSqlite );
     QSqlDatabase getDB();
 
-    bool validarUsuario( QString tabla, QString usuario, QString clave );
+    QStringList validarUsuario( QString tabla, QString usuario, QString clave );
     bool validarFormulario( QString tabla, QString nombre, QString apellido, QString mail );
+
+    QVector< QStringList > select( QString comando );
 
 private:
     QSqlDatabase db;

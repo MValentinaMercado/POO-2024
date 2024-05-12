@@ -47,6 +47,9 @@ private slots:
     void slot_desbloquearUsuario();
     void slot_imagenDescargada(QNetworkReply *reply);
 
+signals:
+    void signal_usuarioValidado( QString usuario );
+
 };
 
 #endif // LOGIN_H

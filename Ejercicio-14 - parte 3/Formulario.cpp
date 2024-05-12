@@ -1,7 +1,7 @@
 #include "Formulario.h"
 #include <QDebug>
 
-Formulario::Formulario() {
+Formulario::Formulario(AdminDB *adminDB) : adminDB(adminDB)  {
     setWindowTitle("Formulario");
     lNombre = new QLabel("Nombre:");
     lApellido = new QLabel("Apellido:");
@@ -20,7 +20,6 @@ Formulario::Formulario() {
     layout->addWidget(pbAlta, 3, 0, 1, 2);
     setLayout(layout);
 
-    adminDB = new AdminDB( this );
     qDebug() << "La base se abrio bien" << adminDB->conectar( "C:/Sqlite/DB/base_prueba" );
 
     connect(pbAlta, SIGNAL(clicked()), this, SLOT(slot_UsuarioForm()));
@@ -28,13 +27,12 @@ Formulario::Formulario() {
 
 
 void Formulario::slot_UsuarioForm() {
-    QString nombre = leNombre->text();
-    QString apellido = leApellido->text();
-    QString mail = leMail->text();
 
     //|Carlos|Gomez|cgomez@gmail.com
 
-    if (adminDB->validarFormulario("usuarios", nombre, apellido, mail)) {
+    if (adminDB->validarFormulario("usuarios", leNombre->text(),leApellido->text(), leMail->text())) {
+        // Cerrar la conexión de la base de datos
+        adminDB->getDB().close();
         close();
     } else {
         qDebug() << "Formulario no válido";
