@@ -49,6 +49,18 @@ sqlite> select * from usuarios;
 8|mramirez|1234|Manuel|Ramirez|mramirez@gmail.com
 9|eperez|1234|Elena|Perez|eperez@gmail.com
 10|rcastillo|1234|Roberto|Castillo|rcastillo@gmail.com
-sqlite> .exit
-
-C:\Sqlite\sqlite-tools-win-x64-3450300>
+sqlite> UPDATE usuarios
+   ...> SET clave = '81dc9bdb52d04dc20036dbd8313ed055';
+sqlite>
+sqlite> select * from usuarios;
+1|cgomez|81dc9bdb52d04dc20036dbd8313ed055|Carlos|Gomez|cgomez@gmail.com
+2|jlopez|81dc9bdb52d04dc20036dbd8313ed055|Juan|Lopez|jlopez@gmail.com
+3|mmartinez|81dc9bdb52d04dc20036dbd8313ed055|Maria|Martinez|mmartinez@gmail.com
+4|jperez|81dc9bdb52d04dc20036dbd8313ed055|Jose|Perez|jperez@gmail.com
+5|asanchez|81dc9bdb52d04dc20036dbd8313ed055|Ana|Sanchez|asanchez@gmail.com
+6|dgonzalez|81dc9bdb52d04dc20036dbd8313ed055|David|Gonzalez|dgonzalez@gmail.com
+7|lrodriguez|81dc9bdb52d04dc20036dbd8313ed055|Laura|Rodriguez|lrodriguez@gmail.com
+8|mramirez|81dc9bdb52d04dc20036dbd8313ed055|Manuel|Ramirez|mramirez@gmail.com
+9|eperez|81dc9bdb52d04dc20036dbd8313ed055|Elena|Perez|eperez@gmail.com
+10|rcastillo|81dc9bdb52d04dc20036dbd8313ed055|Roberto|Castillo|rcastillo@gmail.com
+sqlite>
