@@ -187,7 +187,7 @@ boton->colorear( Boton::Azul );
 - Definir la enumeración en Boton
 - Abrir el designer de Ventana y agregar 5 botones (objetos de la clase Boton). Promocionarlos
 - Que esta Ventana con botones quede lo más parecido a la siguiente imagen:
-  [Imagen]([https://github.com/MValentinaMercado/POO-2024/blob/main/imagenes/ejercicio_captcha.jpg](https://github.com/MValentinaMercado/POO-2024/blob/main/imagenes/botones.png))
+  [Imagen](https://github.com/MValentinaMercado/POO-2024/blob/main/imagenes/botones.png)
 - Usar para Ventana grid layout, usar espaciadores y usar todos los recursos posibles del QtDesigner
 - Dibujar un fondo agradable con paintEvent y drawImage
 - Que Boton tenga la señal signal_clic()
