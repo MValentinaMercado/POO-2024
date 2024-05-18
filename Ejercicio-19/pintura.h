@@ -1,3 +1,5 @@
+#ifndef PINTURA_H
+#define PINTURA_H
 #include <QtWidgets>
 
 class Pintura : public QWidget {
@@ -20,3 +22,4 @@ private:
     QImage lienzo;
     QPoint ultimoPunto;
 };
+#endif // PINTURA_H

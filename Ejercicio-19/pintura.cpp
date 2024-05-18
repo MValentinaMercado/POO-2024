@@ -9,7 +9,6 @@ Pintura::Pintura(QWidget* parent) : QWidget(parent) {
     lienzo = QImage(lienzoSize, QImage::Format_RGB32);
     QPainter painter(&lienzo);
     painter.fillRect(lienzo.rect(), Qt::white);
-    // Rellena el lienzo con un color sólido
 }
 
 
@@ -27,7 +26,7 @@ void Pintura::mousePressEvent(QMouseEvent* event) {
 void Pintura::mouseMoveEvent(QMouseEvent* event) {
     if ((event->buttons() & Qt::LeftButton) && ultimoPunto != QPoint()) {
         QPainter painter(&lienzo);
-        painter.setPen(QPen(color, trazo, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));//establecemos el lapiz,ancho,color,etc.
+        painter.setPen(QPen(color, trazo, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
         painter.drawLine(ultimoPunto, event->pos());
         ultimoPunto = event->pos();
         update();
@@ -61,7 +60,6 @@ void Pintura::ampliarTrazo() {
 void Pintura::borrarTodo() {
     QPainter painter(&lienzo);
     painter.fillRect(lienzo.rect(), Qt::white);
-     // rellena el lienzo con un color solido
     update();
 }
 
