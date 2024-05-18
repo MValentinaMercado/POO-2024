@@ -16,6 +16,9 @@
   <property name="windowOpacity">
    <double>0.000000000000000</double>
   </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
   <property name="styleSheet">
    <string notr="true">color: white;</string>
   </property>
@@ -28,14 +31,14 @@
        <pointsize>16</pointsize>
       </font>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
      <property name="styleSheet">
-      <string notr="true">text-align: left;</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Boton</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
