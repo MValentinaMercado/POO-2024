@@ -113,7 +113,7 @@ int main( int argc, char** argv )  {
 
 ```
 
-### [Ejercicio 14](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-14)
+### [Ejercicio 14]()
 
 - Diseñar un login con QGridLayout.
 - Usar asteriscos para la clave.
@@ -123,18 +123,73 @@ int main( int argc, char** argv )  {
 - Si la clave ingresada es admin:1111, se cierra Login y se muestra Formulario
 - Si se ingresa otra clave se borrará el texto del QLineEdit de la clave.
 
-## [Parte 2](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-14%20-%20continuacion)
+## [Parte 2]()
 
 - Publicar en la ventana de Login, la temperatura actual en la Ciudad de Córdoba. Usar alguna API disponible.
 - Agregar un método en Login que permita mostrar u ocultar la información de la temperatura.
 - Además que la ventana de Login tenga como background una imagen descargada de interner, centrada y adaptada en tamaño, sin deformar su aspecto y que permita al usuario que modifique el tamaño del Login y que se siga viendo correctamente la imagen.
 - Agregar un método en Login que permita indicar la URL de la imagen que se mostrará en el background. En caso que nunca se invoque a este método, ninguna imagen se mostrará.
-- Agregar la siguiente característica a Login: Si el usuario falla 3 veces la clave, bloquear por 5 minutos a ese usuario.
 
-## [Parte 3](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-14%20-%20parte%203)
+## [Parte 3]()
+
+- Agregar la siguiente característica a Login: Si el usuario falla 3 veces la clave, bloquear por 5 minutos a ese usuario.
+  
+## [Parte 4]()
+
 - Incorporar la validación de usuarios con QSLite.
 - Todo lo que se haga con la base de datos, que se encuentre en la clase AdminDB
 
+## [Parte 5]()
+
+- Implementar en AdminDB el uso de MD5 para las claves de los usuarios.
+- Acondicionar para que el método utilizado sea el siguiente:
+```cpp
+ /**
+ * Si el usuario y clave son crrectas, este metodo devuelve el nombre y 
+ * apellido en un QStringList.             
+ */
+QStringList AdminDB::validarUsuario( QString tabla, QString usuario, QString clave )  {
+
+    QStringList datosPersonales;
+
+    if ( ! db.isOpen() ) 
+        return datosPersonales;
+
+    QSqlQuery * query = new QSqlQuery( db );
+    QString claveMd5 = QCryptographicHash::hash( clave.toUtf8(), 
+                                                 QCryptographicHash::Md5 ).toHex();
+
+    query->exec( "SELECT nombre, apellido FROM " +
+                 tabla + " WHERE usuario = '" + usuario +
+                 "' AND clave = '" + claveMd5 + "'" );
+
+    while( query->next() )  {
+        QSqlRecord registro = query->record();
+
+        datosPersonales << query->value( registro.indexOf( "nombre" ) ).toString();
+        datosPersonales << query->value( registro.indexOf( "apellido" ) ).toString();
+    }
+
+    return datosPersonales;
+} 
+```
+- Además, definir un método en AdminDB para ejecutar un select a la base. El prototipo es el siguiente:
+```cpp
+/**
+ * @brief Método que ejecuta una consulta SQL a la base de datos que ya se encuentra conectado. 
+          Utiliza QSqlQuery para ejecutar la consulta, con el método next() se van extrayendo 
+          los registros que pueden ser analizados con QSqlRecord para conocer la cantidad de 
+          campos por registro.
+ * @param comando es una consulta como la siguiente: SELECT nombre, apellido, id FROM usuarios
+ * @return Devuelve un QVector donde cada elemento es un registro, donde cada uno de estos registros 
+           están almacenados en un QStringList que contiene cada campo de cada registro.               
+ */
+QVector< QStringList > select( QString comando ); 
+```
+- Definir en Login una signal que se emita cada vez que un usuario se loguee exitosamente. La signal debe emitir el nombre de usuario.
+```cpp
+void signal_usuarioValidado( QString usuario ); 
+```
 
 ### [Ejercicio 15](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-15)
 #### [Enunciado](https://github.com/MValentinaMercado/POO-2024/blob/main/imagenes/ejercicio_captcha.jpg)
@@ -201,6 +256,22 @@ boton->colorear( Boton::Azul );
 - Si sucede un problema en la compilación, analizar los motivos (respetar el enunciado).
 - Solucionar ese problema y ver la alternativa de hacerlo con Manager.
 
+### [Ejercicio 22](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-22)
+
+- Crear una clase base llamada Instrumento y las clases derivadas Guitarra, Bateria y Teclado.
+- La clase base tiene una función virtual pura llamada sonar().
+- Defina una función virtual verlo() que publique la marca del instrumento. Por defecto todos los instrumentos son de la marca Yamaha.
+- Utilice en la función main() un std::vector para almacenar punteros a objetos del tipo Instrumento. Instancie 5 objetos y agréguelos al std::vector.
+- Publique la marca de cada instrumento recorriendo el vector.
+- En las clases derivadas agregue los datos miembro "int cuerdas", "int teclas" e "int tambores" según corresponda. Por defecto, guitarra con 6 cuerdas, teclado con 61 teclas y batería con 5 tambores.
+- Haga que la clase Teclado tenga herencia múltiple, heredando además de una nueva clase Electrico. Todos los equipos del tipo "Electrico" tienen por defecto un voltaje de 220 volts. Esta clase deberá tener un destructor que al destruirse publique la leyenda "Desenchufado".
+- Al llamar a la función sonar(), se deberá publicar "Guitarra suena...", "Teclado suena..." o "Batería suena..." según corresponda.
+- Incluya los métodos get y set que crea convenientes.
+
+### [Ejercicio 23](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-23)
+
+- Reutilizar el código fuente de cualquier otro ejericio y utilizar herencia múltiple, inline y friend.
+- Implementar herencia múltiple, inline y friend cuando sea beneficioso hacerlo.
 
 # Ejercicios Extra
 
