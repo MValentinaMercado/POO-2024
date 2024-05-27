@@ -2,9 +2,9 @@ SQLITE
 Crear base y agregar datos.
 
 
-C:\Users\merca>cd C:\Sqlite\sqlite-tools-win-x64-3450300
+C:\Users\merca>cd C:\Sqlite\DB
 
-C:\Sqlite\sqlite-tools-win-x64-3450300>sqlite.exe base_prueba
+C:\Sqlite\DB>sqlite.exe base_prueba
 "sqlite.exe" no se reconoce como un comando interno o externo,
 programa o archivo por lotes ejecutable.
 
