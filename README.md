@@ -204,7 +204,7 @@ void signal_usuarioValidado( QString usuario );
 - Que el endpoint para validar a los usuarios sea con un POST y que devuelva "denegado" o que devuelva el nombre y el apellido del usuario en el siguiente formato: "Juan Carlos::Ponce"
 - Probar el funcionamiento de este endpoint mediante la web de prueba de FastAPI.
 
-## [Parte 3]
+## [Parte 3](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-16-continuacion-parte3)
 
 - Luego de tener registrados los usuarios en MongoDB y funcionando el endpoint.
 - Acondicionar la clase Login para validar los usuarios contra el endpoint de FastAPI.
