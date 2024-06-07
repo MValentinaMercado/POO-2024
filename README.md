@@ -362,7 +362,7 @@ boton->colorear( Boton::Azul );
 - Definir una ventana vacía en la clase Principal, que herede de QWidget y diseñado con QtDesigner.
 - Agregar a este proyecto la clase AdminDB para permitir el uso de una base de datos.
 - Instanciar un único objeto de AdminDB en la aplicación.
- # - Definir una clase Linea con las siguientes características:
+  - **Definir una clase Linea con las siguientes características:**
      - En los archivos fuente linea.h y linea.cpp
      - Atributos privados: int x_inicial, y_inicial, x_final, y_final
      - Con sus getters y setters.
