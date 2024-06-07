@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Formulario</class>
+ <widget class="QWidget" name="Formulario">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>232</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Formulario</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="QComboBox" name="comboInstrumentos"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="leMetal"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lcuerdas">
+     <property name="text">
+      <string>Cuerdas</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QPushButton" name="pbVerStock">
+     <property name="text">
+      <string>Ver Stock</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lMarca">
+     <property name="text">
+      <string>Marca</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="lteclas">
+     <property name="text">
+      <string>Teclas</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lMetal">
+     <property name="text">
+      <string>Metal</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QPushButton" name="pbAgregar">
+     <property name="text">
+      <string>Agregar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="leMarca"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lprecio">
+     <property name="text">
+      <string>Precio</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="SpinBoxprecio"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QSpinBox" name="SpinBoxteclas"/>
+   </item>
+   <item row="4" column="1">
+    <widget class="QSpinBox" name="SpinBoxcuerdas"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
