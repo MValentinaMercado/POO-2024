@@ -1,0 +1,18 @@
+Guía paso a paso
+
+1. crea el proyecto MiLibrary en Qt:
+New -> Library -> c++ Library
+
+2. copia y paga exactamente los mismos archivos previstos, asegúrate que el .pro quede exactamente como esta. 
+ 
+3. antes de ejecutar hay que obtener el archivo ejecutable del Ejercicio-02.
+
+3.1  Entonces debes copiar los archivos y asegurarte que el .pro quede exactamente igual.
+
+3.2 Al compilar, te va a decir que no encuentra en el PATH la libreria, eso no importa todavía, lo que necesitamos es el ejecutable. 
+
+4. ve al proyecto MyLibrary y compila, te va a pedir el el ejecutable de la carpeta build del ejercicio 2. te vuelve a saltar el error del punto anterior pero eso nos indica que esta bien relacionado el ejecutable.
+
+5. Ahora vamos a las variables del sistema y agregamos en el PATH la ruta de la carpeta build MyLibrary.
+
+6. compila el main, debería funcionar.
