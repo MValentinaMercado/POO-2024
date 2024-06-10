@@ -19,6 +19,14 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 
-4. Abrimos otra terminal y verificamos su funcionamiento con una solicitud POST utilizando el comando curl -X POST -H "Content-Type: application/json" -d "{\"usuario\": \"mariamoreno\", \"clave\": \"2222\"}" http://localhost:8000/validar_usuario para validar el usuario que deseamos.
- si se realizo de forma correcta recibiras el mensaje {"mensaje":"Usuario validado correctamente"} y en la terminal donde ejecutamos el endpoint veremos el mensaje INFO:     127.0.0.1:58325 - "POST /validar_usuario HTTP/1.1" 200 OK
+4. Abrimos otra terminal y verificamos su funcionamiento con una solicitud POST utilizando el comando:
+
+curl -X POST -H "Content-Type: application/json" -d "{\"usuario\": \"mariamoreno\", \"clave\": \"2222\"}" http://localhost:8000/validar_usuario
+para validar el usuario que deseamos.
+
+ si se realizo de forma correcta recibiras el mensaje {"mensaje":"Usuario validado correctamente"} 
+
+y en la terminal donde ejecutamos el endpoint veremos el mensaje
+
+INFO:     127.0.0.1:58325 - "POST /validar_usuario HTTP/1.1" 200 OK
  Es necesario tener activado el servidor de MongoDB (comando mongod en una terminal nueva).
