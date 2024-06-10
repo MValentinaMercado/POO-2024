@@ -5,7 +5,7 @@
 - Generar y mostrar números aleatorios en el intervalo [2, 20] utilizando QtCreator.
 
   
-### [Ejercicio 01](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-02) 
+### [Ejercicio 02](https://github.com/MValentinaMercado/POO-2024/tree/main/Ejercicio-02) 
 
 - Objetivo: Familiarización con librerías, archivos DLL y variable de entorno PATH. Tener presente la distinción entre biblioteca, librería y library.
 
